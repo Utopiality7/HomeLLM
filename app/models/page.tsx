@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default async function Page() {
 	// List of all models
 	const modelsList = await ollama.list();
+
 	const models = modelsList.models;
 
 	return (
