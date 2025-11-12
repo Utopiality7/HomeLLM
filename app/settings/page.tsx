@@ -13,7 +13,7 @@ export default function Page() {
 			<h2 className="mb-2 self-start text-center text-xl font-bold lg:text-3xl">
 				My Settings
 			</h2>
-			<form className="flex w-full flex-col gap-4 lg:w-[70%]">
+			{/* <form className="flex w-full flex-col gap-4 lg:w-[70%]">
 				<div>
 					<CreateModelInput
 						description="Ollama connection URL"
@@ -37,7 +37,7 @@ export default function Page() {
 					name="Default system message"
 					textArea
 				/>
-			</form>
+			</form> */}
 
 			{/* docs */}
 			<div className="mt-10 max-w-sm self-center rounded-md bg-lightSecondary px-2 py-1 text-center text-sm text-lightTextSecondary dark:bg-darkSecondary dark:text-darkTextSecondary">
