@@ -1,18 +1,19 @@
 import { streamText } from 'ai';
-import { NextResponse, type NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { ollama } from '@/app/services/ollama';
-
-// model to be used by ollama
-const MODEL_NAME: string = 'qwen2.5-coder:3b';
 
 // post messages from the front end
 export async function POST(request: NextRequest) {
 	try {
-		const { messages } = await request.json();
+		const body = await request.json();
+
+		console.log('BODY', body);
+		if (body.model === 'Select a model')
+			return NextResponse.json({ error: 'Error' });
 
 		const aiResponse = streamText({
-			model: ollama(MODEL_NAME),
-			messages,
+			model: ollama(body.model),
+			messages: body.messages,
 		});
 
 		return aiResponse.toDataStreamResponse();

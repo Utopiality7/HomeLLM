@@ -1,4 +1,4 @@
-import ChatLoader from '@/app/components/ChatLoader';
+import TinySpinner from '@/app/components/TinySpinner';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,7 +9,11 @@ export default function Page() {
 	return (
 		<div>
 			CREATE
-			{/* <ChatLoader isVisible /> */}
+			<div>
+				<button>
+					<TinySpinner /> CLICK
+				</button>
+			</div>
 		</div>
 	);
 }

@@ -10,8 +10,9 @@ export default function Logo({ type = 'large' }: { type?: string }) {
 
 	return (
 		<div className="flex flex-col items-center">
-			<div className="relative aspect-square h-14">
+			<div className="relative aspect-square h-12 lg:h-14">
 				<Image
+					quality={70}
 					fill
 					src={theme === 'light' ? LightLogo : DarkLogo}
 					alt="App logo"

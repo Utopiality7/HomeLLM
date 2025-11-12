@@ -18,6 +18,7 @@ export default {
 				darkAccent: '#2af598',
 				darkText: '#e6e6e6',
 				darkTextSecondary: '#8b949e',
+				darkError: '#F87171',
 
 				// light theme
 				lightBg: '#f9fafb',
@@ -26,6 +27,7 @@ export default {
 				lightAccent: '#2fd088',
 				lightText: '#1e293b',
 				lightTextSecondary: '#6b7280',
+				lightError: '#DC2626',
 			},
 		},
 	},

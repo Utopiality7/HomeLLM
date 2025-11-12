@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				</h2>
 				<ModelsNavigation />
 			</div>
-			<div className="h-full">{children}</div>
+			<div className="h-full overflow-y-scroll pt-2">{children}</div>
 		</div>
 	);
 }
