@@ -2,6 +2,7 @@
 
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 
 export default function ThemeSwitch() {
@@ -12,6 +13,7 @@ export default function ThemeSwitch() {
 		setTheme(prev => {
 			return prev === 'dark' ? 'light' : 'dark';
 		});
+		toast.success('Theme switched');
 	}
 
 	useEffect(() => {

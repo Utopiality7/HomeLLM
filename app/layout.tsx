@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import Footer from './components/Footer';
 import ReduxProvider from './components/ReactRedux';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({
 	subsets: ['latin'],
@@ -46,6 +47,14 @@ export default function RootLayout({
 						</div>
 					</ThemeProvider>
 				</ReduxProvider>
+				{/* React Hot Toast notifications */}
+				<Toaster
+					gutter={8}
+					toastOptions={{
+						duration: 3000,
+						className: 'dark:bg-darkSecondary dark:text-darkText',
+					}}
+				/>
 			</body>
 		</html>
 	);
