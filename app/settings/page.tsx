@@ -1,7 +1,7 @@
-import CreateModelInput from '../components/CreateModelInput';
-
 import Link from 'next/link';
 import { Metadata } from 'next';
+import ConnectionTest from '../components/ConnectionTest';
+import SettingsForm from '../components/SettingsForm';
 
 export const metadata: Metadata = {
 	title: 'Settings',
@@ -13,31 +13,10 @@ export default function Page() {
 			<h2 className="mb-2 self-start text-center text-xl font-bold lg:text-3xl">
 				My Settings
 			</h2>
-			{/* <form className="flex w-full flex-col gap-4 lg:w-[70%]">
-				<div>
-					<CreateModelInput
-						description="Ollama connection URL"
-						id="url"
-						placeholder="http://localhost:11434"
-						name="Ollama url"
-					/>
-					<button className="bg-green-200">TEST Connection</button>
-				</div>
 
-				<CreateModelInput
-					description="Your name"
-					id="name"
-					placeholder="John Doe"
-					name="Your name"
-				/>
-				<CreateModelInput
-					description="Default system message to customize the behavior."
-					id="system"
-					placeholder="You are a helpful Assistant."
-					name="Default system message"
-					textArea
-				/>
-			</form> */}
+			<ConnectionTest />
+
+			<SettingsForm />
 
 			{/* docs */}
 			<div className="mt-10 max-w-sm self-center rounded-md bg-lightSecondary px-2 py-1 text-center text-sm text-lightTextSecondary dark:bg-darkSecondary dark:text-darkTextSecondary">
@@ -47,7 +26,7 @@ export default function Page() {
 					href="https://github.com/Utopiality7"
 					target="_blank"
 				>
-					Documentation.
+					/Documentation.
 				</Link>
 			</div>
 
