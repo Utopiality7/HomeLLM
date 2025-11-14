@@ -10,6 +10,8 @@ import { PiInfoLight } from 'react-icons/pi';
 import { useDispatch } from 'react-redux';
 import { switchModel } from '../models/modelSlice';
 import { deleteModel } from '../actions';
+import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa';
 
 export default function ModelDisplay({ modelsList }: { modelsList: Model[] }) {
 	// console.log(modelsList);
@@ -46,7 +48,7 @@ export default function ModelDisplay({ modelsList }: { modelsList: Model[] }) {
 				}
 
 				return (
-					<li className="p-2 lg:w-2/3 lg:self-center" key={idx}>
+					<li className="p-2 pr-3 lg:w-2/3 lg:self-center" key={idx}>
 						<div className="flex justify-between">
 							<div className="flex gap-3 font-light">
 								<p className="font-semibold">{el.name}</p>
@@ -132,6 +134,13 @@ export default function ModelDisplay({ modelsList }: { modelsList: Model[] }) {
 										DELETE
 									</motion.button>
 								</div>
+								<Link
+									className="mt-2 flex items-center gap-1 text-sm underline"
+									href={`/models/${el.model}`}
+								>
+									Details
+									<FaArrowRight className="font-xs" />
+								</Link>
 							</motion.div>
 						)}
 					</li>

@@ -52,7 +52,7 @@ export default function CreateModelInput({
 				/>
 			)}
 			{errors && (
-				<div className="text-lightError dark:text-darkError mt-0.5 flex items-center justify-center gap-1 text-center text-xs font-light lg:font-normal">
+				<div className="mt-0.5 flex items-center justify-center gap-1 text-center text-xs font-light text-lightError dark:text-darkError lg:font-normal">
 					<GoAlert />
 					<p>{errors}</p>
 				</div>
