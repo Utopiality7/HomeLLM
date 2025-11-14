@@ -1,4 +1,6 @@
+import { Suspense } from 'react';
 import ModelsNavigation from '../components/ModelsNavigation';
+import Spinner from '../components/Spinner';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
@@ -7,9 +9,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 				<h2 className="text-xl font-bold capitalize lg:text-3xl">My models</h2>
 				<ModelsNavigation />
 			</div>
-			<div className="mx-auto h-96 max-w-[200rem] flex-grow overflow-y-scroll pt-2 lg:w-[80%]">
-				{children}
-			</div>
+			{/* Suspense boundary */}
+			<Suspense fallback={<Spinner />}>
+				<div className="mx-auto h-96 max-w-[200rem] flex-grow overflow-y-scroll pt-2 lg:w-[80%]">
+					{children}
+				</div>
+			</Suspense>
 		</div>
 	);
 }
